@@ -1,4 +1,5 @@
 import React from 'react'
+import About from './About'
 
 function Home() {
   return (
@@ -11,8 +12,10 @@ function Home() {
               <a href='#' className='header-btn'>Order</a>
             </div>
 
-        </div>
+        </div><br/><br/>
+        
     </div>
+   
   )
 }
 
