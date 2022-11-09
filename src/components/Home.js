@@ -1,6 +1,7 @@
 import React from 'react'
-import About from './About';
-function HomeContainer() {
+import About from './About'
+
+function Home() {
   return (
     <div id='main'>
         <div className='header-heading'>
@@ -10,11 +11,12 @@ function HomeContainer() {
             <div className='header-btns'>
               <a href='#' className='header-btn'>Order</a>
             </div>
-            <div>
-                <About/>
-                </div>
-        </div>
+
+        </div><br/><br/>
+        
     </div>
+   
   )
 }
-export default HomeContainer;
+
+export default Home
