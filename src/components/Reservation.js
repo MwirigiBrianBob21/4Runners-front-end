@@ -13,6 +13,7 @@ function Reservation (){
     <input type='email' placeholder="enter your email"/>
     <input type='number' placeholder="enter your phone number"/>
     <input type='datetime-local' placeholder="enter time and date"/>
+    <input type='number' placeholder="enter number of seats"/>
     <input type='submit' value="BOOK"/>
     
     
