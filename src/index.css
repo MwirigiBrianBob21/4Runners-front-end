@@ -225,6 +225,7 @@ nav .menu-btn,
     color: #3d2514;
     border: 2px solid #3d2514;
 }
+/* about styling */
 #about{
     margin-top:100px ;
 	width:100%;
@@ -478,3 +479,24 @@ nav .menu-btn,
 
         }
     }
+
+    .about-image{
+        height: 500px;
+        width: 400px;
+      margin-left: 200px;
+      }
+      .about-container{
+        margin-top: 100px;
+        font-size: 18px;
+        display: flex;
+      }
+      .about-us{
+      border: 2px;
+      border-style: solid;
+      border-color: rgb(189, 108, 3);
+      width: 400px;
+      text-align: center;
+      height: 500px;
+      font-family: Lato;
+      text-decoration: rgb(239, 207, 165);
+      }
