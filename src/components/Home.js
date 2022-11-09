@@ -8,7 +8,7 @@ function Home() {
             <h1><span>WHAT WE HAVE</span> FOR<br/> YOU</h1>
             <p className='details'>You will always come back at 4Runners-Bistro. Enjoy</p>
             <div className='header-btns'>
-              <a href='#' className='header-btn'>Order</a>
+              <a href='' className='header-btn'>Order</a>
             </div>
 
         </div>

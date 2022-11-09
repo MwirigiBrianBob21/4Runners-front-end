@@ -30,18 +30,14 @@ function App() {
     <div className='App'>
   {
       loading ? <PacManLoader color={'#bf2222'} loading={loading} cssOverride={override} size={30}/>
-      :
+      : <Navbar/>}
       <>
-      <Navbar/>
-      <Routes>
-      <Route exact path="/" element={<Home/>}></Route>
-      <Route exact path="/about" element={<About/>}></Route>
-      <Route exact path="/reservation" element={<Reservation/>}></Route>
-      <Route exact path="/menu" element={<Menu/>}></Route>      
-      </Routes>
+      
+      <Home/>
+      <Menu/>
+      <About/>
       </>
-    }
-
+    
   </div>
   );
 }
