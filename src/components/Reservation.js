@@ -6,23 +6,29 @@ import React from "react";
 
 function Reservation (){
    return(
-    <div className="reservations">
-        <h1>Place your reservation here.</h1>
-   <form>
-    
-    <input type='text' placeholder="full name"/>
-    <input type='email' placeholder="enter your email"/>
-    <input type='number' placeholder="enter your phone number"/>
-    <input type='datetime-local' placeholder="enter time and date"/>
-    <input type='number' placeholder="enter number of seats"/>
-    <input type='submit' value="BOOK"/>
-    <button>Delete</button>
-    
-    
-    
+ <div className="form-container">
+
+         <h1>Place your reservation here.</h1>
+
+   <form className="reservations">
+   <label for="fullname">Full Name</label>
+    <input type='text' placeholder="full name"/><br/>
+    <label for="email">Email</label>
+    <input type='email' placeholder="enter your email"/><br/>
+    <label for="number">Phone Number</label>
+    <input type='number' placeholder="enter your phone number"/><br/>
+    <label for="datetime">Date-Time</label>
+    <input type='datetime-local' placeholder="enter time and date"/><br/>
+    <label for="sits">Number of Sits</label>
+    <input type='number' placeholder="enter number of sits"/><br/>
     
 
+    <div className="buttons">
+    <button type="submit">Book Reservation</button>
+    <button type="submit">Cancel</button>
+    </div>
 </form>
+
 </div>
 
    ) 

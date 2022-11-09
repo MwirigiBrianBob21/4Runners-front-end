@@ -225,6 +225,7 @@ nav .menu-btn,
     color: #3d2514;
     border: 2px solid #3d2514;
 }
+/* about styling */
 #about{
     margin-top:100px ;
 	width:100%;
@@ -475,6 +476,106 @@ nav .menu-btn,
             left:0px;
             background-color:#ffffff;
             /* background-color: rgb(1, 22, 44); */
+            }
+          }
+            
 
-        }
-    }
+
+
+
+/*reservation styling*/
+
+.form-container{
+  
+  /*display: flex;*/
+  justify-content: centre;
+  align-items: center;
+  border-radius: 4rem;
+  width: 700px;
+  height:400px ;
+  color: orange;
+  margin-left: 20%;
+  margin-top: 4rem;
+  
+  
+
+}
+.reservations{
+  position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    flex-direction: column;
+    transition: right 0.5s;
+    margin-top: 0.2px;
+    padding-top: 0.5rem;
+    
+   
+
+    
+}
+
+.reservations input{
+  color: black;
+  font-size:1.5rem;
+  padding: 20px;
+  
+}
+
+
+
+.buttons {
+  
+    color: black;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    border-radius: 4rem;
+}
+
+.buttons:hover{
+  background-color: #ffffff;
+  color:  #BF2222;
+  box-shadow: 5px 10px 30px rgba(255, 2, 2, 0.336);
+  transition: all ease 0.2s;
+}
+
+ h1{
+  text-align: center;
+  /*display: flex;*/
+  justify-content: center;
+  height: 10vh;
+  align-items: center;
+  font-size: 20;
+  color: white;
+  padding-top: 8rem;
+  margin-bottom: 10rem;
+  margin: 50px;
+  justify-content: centre;
+}      
+       .about-image{
+        height: 500px;
+        width: 400px;
+      margin-left: 200px;
+      }
+      .about-container{
+        margin-top: 100px;
+        font-size: 18px;
+        display: flex;
+      }
+      .about-us{
+      border: 2px;
+      border-style: solid;
+      border-color: rgb(189, 108, 3);
+      width: 400px;
+      text-align: center;
+      height: 500px;
+      font-family: Lato;
+      text-decoration: rgb(239, 207, 165);
+      }
+
