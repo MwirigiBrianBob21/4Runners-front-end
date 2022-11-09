@@ -1,5 +1,5 @@
 import React from 'react'
-import Menubox from './Menubox';
+import Menubox from './MenuBox';
 import pimage1 from '../images/s1.png'
 import pimage2 from '../images/s2.png'
 
