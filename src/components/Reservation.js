@@ -1,4 +1,5 @@
 import React from "react";
+
 //import MenuList from "./MenuList";
 //import About from "./About";
 
@@ -15,6 +16,7 @@ function Reservation (){
     <input type='datetime-local' placeholder="enter time and date"/>
     <input type='number' placeholder="enter number of seats"/>
     <input type='submit' value="BOOK"/>
+    <button>Delete</button>
     
     
     

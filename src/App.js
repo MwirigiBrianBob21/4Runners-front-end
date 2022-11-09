@@ -33,11 +33,15 @@ function App() {
       :
       <>
       <Navbar/>
-      <Home/>
-      <Menu/>
-      <About/>
+      <Routes>
+      <Route exact path="/" element={<Home/>}></Route>
+      <Route exact path="/about" element={<About/>}></Route>
+      <Route exact path="/reservation" element={<Reservation/>}></Route>
+      <Route exact path="/menu" element={<Menu/>}></Route>      
+      </Routes>
       </>
     }
+
   </div>
   );
 }
