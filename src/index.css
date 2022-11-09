@@ -143,20 +143,24 @@ margin-left: 200px;
 }
 
 .about-container{
+  margin-top: 100px;
   font-size: 18px;
   display: flex;
 }
 .about-us{
 border: 2px;
 border-style: solid;
-border-color: rgb(243, 152, 34);
+border-color: rgb(189, 108, 3);
 width: 400px;
 text-align: center;
-
+height: 500px;
+font-family: Lato;
+text-decoration: rgb(239, 207, 165);
 }
 
-h3{
-  color: white;
+h4{
+  text-decoration:underline;
+  color: rgb(249, 150, 78);
   font-family :Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 p{

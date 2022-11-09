@@ -11,8 +11,8 @@ function About(){
 />
      </div>
      <div className="about-us">
-        <h3>ABOUT US</h3><br/><br/>
-        <p>  A stunning combination of contemporary American fare with Italian influences, Mariner’s Bistro in Edgewater, New Jersey creates a dining experience that is deliciously familiar yet refined and innovative. With elegant indoor and outdoor dining, genuine hospitality and exquisite food Mariner’s Bistro boasts it all.  </p>
+        <h4>ABOUT US</h4><br/><br/>
+        <p>  A stunning combination of contemporary American fare with Italian influences, 4Runners Bistro in Kileleshwa, Nairobi creates a dining experience that is deliciously familiar yet refined and innovative. With elegant indoor and outdoor dining, genuine hospitality and exquisite food 4Runners Bistro boasts it all.  </p>
      </div>
             
 
