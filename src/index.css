@@ -63,7 +63,7 @@ nav ul li a{
 	margin: 3px;
 	padding: 0px 22px;
 	display: flex;
-	font-size: 1.2rem;
+	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: 500;
 	color:#f7b07e;
@@ -420,26 +420,7 @@ nav .menu-btn,
         margin-left: 20%;
         margin-top: 20px;
     }
-	#about{
-		justify-content: center;
-        padding-top: 0px;
-        text-align: center;
-        
-        margin-top: 0px;
-	}
-	.about-text{
-        width: 90%;
-        text-align: center;
-	}
-	.about-text h1{
-		font-size:3rem;
-    }
-    .about-text p{
-        width: 100%;
-    }
-    .about-text button {
-        margin-left: 30%;
-    }
+	
     #products{
         margin-bottom: 100px;
     }
@@ -531,25 +512,36 @@ nav .menu-btn,
   align-items: center;
   margin: 50px;
   justify-content: centre;
-}      
+} 
+
+/* about styling */
        .about-image{
         height: 500px;
         width: 400px;
       margin-left: 200px;
       }
       .about-container{
-        margin-top: 100px;
+        margin-top: 200px;
         font-size: 18px;
         display: flex;
+        text-decoration: #fff;
       }
       .about-us{
       border: 2px;
       border-style: solid;
-      border-color: rgb(189, 108, 3);
+      border-color: rgb(233, 135, 8);
       width: 400px;
       text-align: center;
       height: 500px;
       font-family: Lato;
-      text-decoration: rgb(239, 207, 165);
+      color: beige;
+      }
+      
+      h4{
+         text-decoration: #bf6702;
+         text-decoration: underline;
+         color: #ac7205;
+         font-family: Lato;
+         font-size: 30px;
       }
 

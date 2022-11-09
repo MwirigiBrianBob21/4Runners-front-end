@@ -1,5 +1,6 @@
 import React from 'react'
 import About from './About'
+import Menu from './Menu'
 
 function Home() {
   return (
@@ -13,7 +14,6 @@ function Home() {
             </div>
 
         </div><br/><br/>
-        
     </div>
    
   )
