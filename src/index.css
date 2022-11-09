@@ -476,11 +476,63 @@ nav .menu-btn,
             left:0px;
             background-color:#ffffff;
             /* background-color: rgb(1, 22, 44); */
+            }
+          }
+            
 
-        }
-    }
 
-    .about-image{
+
+
+/*reservation styling*/
+
+.form-container{
+  
+  display: flex;
+  justify-content: centre;
+  align-items: center;
+  border-radius: 4rem;
+  width: 700px;
+  height:400px ;
+}
+.reservations{
+  width: 1800px;
+  border: 1px solid yellow;
+  height: 70%;
+  margin-top: 90px;
+  padding: ;
+
+}
+
+.reservations input{
+  color: black;
+  font-size: 3rem;
+}
+
+
+
+.buttons {
+  
+    color: #723b2a;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.buttons:hover{
+  background: #723b2a;
+  color: white;
+
+}
+
+ h1{
+  font-size: 30px;
+  color: white;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  margin: 50px;
+  justify-content: centre;
+}      
+       .about-image{
         height: 500px;
         width: 400px;
       margin-left: 200px;
@@ -500,3 +552,4 @@ nav .menu-btn,
       font-family: Lato;
       text-decoration: rgb(239, 207, 165);
       }
+
