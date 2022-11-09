@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 
 
-function Navbar() {
+function NavBar() {
   const[nav, setNav] = useState(false)
   const changeBackground = () => {
     if(window.scrollY >= 50){
@@ -37,7 +37,7 @@ function Navbar() {
     </nav>
   )
 }
-export default Navbar
+export default NavBar
 
 
 
