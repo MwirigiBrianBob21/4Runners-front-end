@@ -12,7 +12,6 @@ import SignUp from './components/SignUp';
 import SignIn from './components/signIn';
 
 
-
 function App() {
   const [reservations, setReservations] = useState([]);
 
@@ -59,7 +58,9 @@ function App() {
       <div>
         <Router>
           <div>
+            
       <Navbar/>
+
       </div>
       <Routes>
       <Route exact path="/" element={<Home/>}></Route>

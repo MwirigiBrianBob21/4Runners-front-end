@@ -1,26 +1,18 @@
-import React, { useEffect, useState } from "react";
-// import { Route, useParams, useMatch } from "react-router-dom";
+import React, { useEffect, useState }  from 'react'
+import Menubox from './MenuBox';
+import MenuCard from "./MenuCard";
+import { useEffect, useState } from 'react';
 
-import Menubox from "./MenuBox";
-// import {Li}
-// import MenuList from './MenuList'
-import pimage1 from "../images/s1.png";
-import pimage2 from "../images/s2.png";
 
 function Menu() {
-  const [allMenu, setAllMenu] = useState([]);
-
-  // const params = useParams()
-  // console.log("params:", params)
-
-  // const routeMatch = useMatch()
-  // console.log("routeMatch;", routeMatch)
+  const [allMenu, setAllMenu] = useState([]); 
 
   useEffect(() => {
     fetch("http://localhost:9292/menus")
       .then((res) => res.json())
       .then((data) => setAllMenu(data));
   }, []);
+
 
   return (
     <div id="products">
@@ -45,14 +37,10 @@ function Menu() {
       ))}
       
       </div>
+
     </div>
   );
 }
 
 export default Menu;
 
-// {/* <Menubox image={pimage1} title="Luger Burger" price="Ksh. 350" availability="true"/>
-//           <Menubox image={pimage2} title="Le Pigeon Burger" price="Ksh. 500" availability="false"/>
-//           <Menubox image={pimage1} title="Luger Burger" price="Ksh. 250" availability="false"/>
-
-// */}
