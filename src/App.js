@@ -12,7 +12,6 @@ import SignUp from './components/SignUp';
 import SignIn from './components/signIn';
 
 
-
 function App() {
   const [loading, setLoading] = useState(false);
 
@@ -47,7 +46,9 @@ function App() {
       <div>
         <Router>
           <div>
+            
       <Navbar/>
+
       </div>
       <Routes>
       <Route exact path="/" element={<Home/>}></Route>
@@ -60,6 +61,8 @@ function App() {
       </Router>
       </div>
     }
+ 
+
 
   </div>
   )}
