@@ -63,7 +63,7 @@ nav ul li a{
 	margin: 3px;
 	padding: 0px 22px;
 	display: flex;
-	font-size: 1.2rem;
+	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: 500;
 	color:#f7b07e;
@@ -138,34 +138,48 @@ nav .menu-btn,
 }
 
 #products{
+    /* border: 2px solid green; */
     width:100%;
-    height:120vh;
+    height:max-content;
     box-sizing: border-box;
     font-family:'Lato';
-    display: flex;
+    display: grid;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-top: 40px ;
     background-color: rgb(1, 22, 44);}
 #products h1{
+    /* border: 2px solid yellow; */
     font-family:'Alfa Slab One';
     letter-spacing: 2px;
     color: #eb680b;
     font-size: 3rem;
+    margin-top: 0px;
+    height: fit-content;
+    /* position: fixed; */
 }
 #products p{
-    font-family:'Bebas Neue';
-    letter-spacing: 1px;
+    /* border: 2px solid blue; */
+    /* font-family: 'Bebas Neue'; */
+    letter-spacing: 3px;
     color: #f7b07e;
-    font-size: 0.8rem;
-    margin-top:-15px ;
-    margin-bottom:35px ;
-}
-.a-container{
-    display: flex;
-    justify-content: center;
+    font-size: 1rem;
+    /* width: 80%; */
     align-content: center;
+    /* margin: 30px 30px; */
+    padding: 30px 30px;
+}
+    
+
+.a-container{
+    /* border: 2px solid white; */
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 
 
 }
@@ -420,26 +434,7 @@ nav .menu-btn,
         margin-left: 20%;
         margin-top: 20px;
     }
-	#about{
-		justify-content: center;
-        padding-top: 0px;
-        text-align: center;
-        
-        margin-top: 0px;
-	}
-	.about-text{
-        width: 90%;
-        text-align: center;
-	}
-	.about-text h1{
-		font-size:3rem;
-    }
-    .about-text p{
-        width: 100%;
-    }
-    .about-text button {
-        margin-left: 30%;
-    }
+	
     #products{
         margin-bottom: 100px;
     }
@@ -470,6 +465,7 @@ nav .menu-btn,
             margin: 0;
         }
         .menu{
+            /* border: 5px solid red; */
             display:none;
             position:absolute;
             top:65px;
@@ -547,7 +543,7 @@ nav .menu-btn,
 
  h1{
   text-align: center;
-  /*display: flex;*/
+  /* display: flex; */
   justify-content: center;
   height: 10vh;
   align-items: center;
@@ -557,25 +553,36 @@ nav .menu-btn,
   margin-bottom: 10rem;
   margin: 50px;
   justify-content: centre;
-}      
+} 
+
+/* about styling */
        .about-image{
         height: 500px;
         width: 400px;
       margin-left: 200px;
       }
       .about-container{
-        margin-top: 100px;
+        margin-top: 200px;
         font-size: 18px;
         display: flex;
+        text-decoration: #fff;
       }
       .about-us{
       border: 2px;
       border-style: solid;
-      border-color: rgb(189, 108, 3);
+      border-color: rgb(233, 135, 8);
       width: 400px;
       text-align: center;
       height: 500px;
       font-family: Lato;
-      text-decoration: rgb(239, 207, 165);
+      color: beige;
+      }
+      
+      h4{
+         text-decoration: #bf6702;
+         text-decoration: underline;
+         color: #ac7205;
+         font-family: Lato;
+         font-size: 30px;
       }
 
