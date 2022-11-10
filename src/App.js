@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+
 import Navbar from './components/Navbar';
-// import {css} from "@emotion/react";
 import Home from './components/Home';
 import Menu from './components/Menu';
 import About from './components/About';
@@ -12,23 +12,28 @@ import SignUp from './components/SignUp';
 import SignIn from './components/signIn';
 
 
+
 function App() {
   const [reservations, setReservations] = useState([]);
 
+  const [loading, setLoading] = useState(false);
 
-  const[loading, setLoading] = useState(false);
-  const override ={
-  display:"block",
-  borderColor:"red",
-  marginTop:"20%"
+  const [menu, setMenu] = useState([]);
+  const [filteredMenu, setFilteredMenu] = useState([]);
+  const [favMenu, setFavMenu] = useState([]);
+
+  const override = {
+    display: "block",
+    borderColor: "red",
+    marginTop: "20%",
   };
 
-  useEffect(()=>{
-    setLoading(true)
-    setTimeout(()=>{
-      setLoading(false)
-    }, 3000)
-  }, [])
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
 
   const [currentUser, setCurrentUser] = useState(null)
   const changeUser = (user) => {
@@ -46,6 +51,7 @@ function App() {
   }
 
   return (
+
     <div className='App'>
   {
       loading ? <PacManLoader color={'#bf2222'} loading={loading} cssOverride={override} size={30}/>
@@ -66,9 +72,9 @@ function App() {
       </Router>
       </div>
     }
-
   </div>
-  );
-}
+  export default App;
 
-export default App;
+ 
+
+
