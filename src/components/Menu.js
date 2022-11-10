@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 // import { Route, useParams, useMatch } from "react-router-dom";
 
 import Menubox from "./MenuBox";
+import MenuCard from "./MenuCard";
 // import {Li}
 // import MenuList from './MenuList'
 import pimage1 from "../images/s1.png";

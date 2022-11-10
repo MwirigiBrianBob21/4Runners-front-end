@@ -1,5 +1,6 @@
 import React,{ useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+
 const SignUp = () => {
     const navigate = useNavigate()
     const [customer, setCustomer] = useState({
@@ -8,7 +9,11 @@ const SignUp = () => {
         password:'',
         
     })
+
+
     const [errors, setErrors] = useState(null)
+
+    
     const handleSubmission = (e) => {
         e.preventDefault()
         if (customer.name.length < 3) {
