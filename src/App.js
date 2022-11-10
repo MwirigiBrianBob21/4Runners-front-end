@@ -13,6 +13,8 @@ import SignIn from './components/signIn';
 
 
 function App() {
+  const [reservations, setReservations] = useState([]);
+
 
   const[loading, setLoading] = useState(false);
   const override ={
@@ -32,6 +34,16 @@ function App() {
   const changeUser = (user) => {
     setCurrentUser(user)
   }
+  useEffect(() => {
+    fetch("http://localhost:3000/reservation")
+      .then((r) => r.json())
+      .then((reservations) => setReservations(reservations));
+  }, [])
+  
+
+  function handleAddReservation(newReservation) {
+    setReservations([...reservations, newReservation]);
+  }
 
   return (
     <div className='App'>
@@ -46,7 +58,7 @@ function App() {
       <Routes>
       <Route exact path="/" element={<Home/>}></Route>
       <Route exact path="/about" element={<About/>}></Route>
-      <Route exact path="/reservation" element={<Reservation/>}></Route>
+      <Route exact path="/reservation" onAddMessage={handleAddReservation} element={<Reservation/>}></Route>
       <Route exact path="/menu" element={<Menu/>}></Route> 
       <Route exact path="/signin" element={<SignIn changeUser={changeUser} />} />
       <Route exact path="/signup" element={<SignUp />} />     

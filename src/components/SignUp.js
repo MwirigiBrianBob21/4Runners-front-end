@@ -2,6 +2,7 @@ import React,{ useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 const SignUp = () => {
     const navigate = useNavigate()
+   
     const [customer, setCustomer] = useState({
         name: '',
         email: '',
@@ -19,7 +20,7 @@ const SignUp = () => {
             setErrors('Password must be at least 3 characters long')
         } 
          else {
-        fetch('http://localhost:9292/developers', {
+        fetch('http://localhost:9292/customers', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -53,7 +54,7 @@ const SignUp = () => {
         <div className="input-field">
             <input name="name" type="text" placeholder="Name"  autoFocus={true} value={customer.name} onChange={handleChange} />
             <input name="email" type="text" placeholder="Email"  autoFocus={true} value={customer.email} onChange={handleChange} />
-            <input name="password" type="text" placeholder="password"  autoFocus={true} value={customer.email} onChange={handleChange} /> 
+            <input name="password" type="text" placeholder="password"  autoFocus={true} value={customer.password} onChange={handleChange} /> 
             <p>{errors}</p>
             <button type='submit' className="btn solid" onClick={handleSubmission}>Sign Up</button>
             <div  className='link-to-signup'>
