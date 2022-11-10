@@ -72,7 +72,7 @@ function App() {
       </Router>
       </div>
     }
-  </div>
+  </div>)}
   export default App;
 
  
