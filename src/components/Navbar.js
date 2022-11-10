@@ -7,6 +7,11 @@ function Navbar() {
   const[nav, setNav] = useState(false)
 
 
+
+
+
+
+
   const changeBackground = () => {
     if(window.scrollY >= 50){
       setNav(true)
@@ -20,10 +25,14 @@ function Navbar() {
 
   return (
     <nav className={ nav ? "nav active" : "nav"}>
+   
+
       <Link to="main" className='logo'>
         {/* <img src={logo} alt=''/> */}
         <h2>4Runners-Bistro</h2>
+
       </Link>
+      
       <input className='menu-btn' type='checkbox' id='menu-btn'/>
       <label className='menu-icon' for='menu-btn'>
         <span className='nav-icon'></span>
@@ -35,7 +44,9 @@ function Navbar() {
                <li> <NavLink to="/about"  > About </NavLink></li>
 
       </ul>
+  
     </nav>
+    
   )
 }
 

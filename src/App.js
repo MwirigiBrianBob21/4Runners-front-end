@@ -9,7 +9,6 @@ import About from './components/About';
 import Reservation from './components/Reservation';
 import PacManLoader from 'react-spinners/PacmanLoader';
 
-
 function App() {
 
   const[loading, setLoading] = useState(false);
@@ -34,17 +33,22 @@ function App() {
       <div>
         <Router>
           <div>
+            
       <Navbar/>
+
       </div>
       <Routes>
       <Route exact path="/" element={<Home/>}></Route>
       <Route exact path="/about" element={<About/>}></Route>
       <Route exact path="/reservation" element={<Reservation/>}></Route>
-      <Route exact path="/menu" element={<Menu/>}></Route>      
+      <Route exact path="/menu" element={<Menu/>}></Route>  
+
       </Routes>
       </Router>
       </div>
     }
+ 
+
 
   </div>
   );

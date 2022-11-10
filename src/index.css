@@ -26,7 +26,14 @@ input{
     border: none;
 }
 .logo img{
-    width: 120px;
+  
+  width: 120px;
+}
+.logo h2{
+    font-size: 40px;
+    font-family: 'Alfa Slab One';
+    color:#4FA095;
+
 }
 #main{
     width:100%;
@@ -34,7 +41,7 @@ input{
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('./images/banner.png');
+    background-image: url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1600');
     /* background-color: rgb(1, 22, 44); */
 
 }
@@ -63,7 +70,7 @@ nav ul li a{
 	margin: 3px;
 	padding: 0px 22px;
 	display: flex;
-	font-size: 20px;
+	font-size: 25px;
 	text-transform: uppercase;
 	font-weight: 500;
 	color:#f7b07e;
@@ -83,35 +90,39 @@ nav .menu-btn,
 	}
 .header-heading{
 	font-family: 'Montserrat';
-	width: 900px;
+	width: 800px;
 	position: absolute;
-    left: 25%;
-    top: 55%;
+    left: 65%;
+    top: 45%;
     text-align: left;
 	transform: translate(-25%,-55%);
 }
 .header-heading span{
+
     font-family: 'Alfa Slab One';
-    color: #bf2222;
+    color: #f4e0d4;
+
+    font-size: 35px;
     border-bottom: 2px solid #3d2514;
 }
-.header-heading .details{
-    font-size: 23px;
-    color: #181818;
-}
+
 .header-heading h3{
-	font-family:'Bebas Neue';
-	font-size: 1.6rem;
+	font-family:'Alfa Slab One';
+	font-size: 30px;
+    font-weight: 200;
 	margin:0px;
 	letter-spacing: 2px;
-	color:#3d2514;
+    color: #f4a374;
+   
+
+	
 }
 .header-heading h1{
 	font-family:'Alfa Slab One';
 	font-size: 4rem;
 	margin:0px;
 	letter-spacing: 2px;
-	color:#3d2514;
+	color: #f8ba7f
 }
 .header-btns{
     display: flex;
@@ -125,7 +136,7 @@ nav .menu-btn,
     align-items: center;
     font-size: 1.4rem;
     font-family:'Lato';
-    background-color: #bf2222;
+    background-color: #581e03;
     box-shadow: 5px 10px 30px rgba(255, 2, 2, 0.336);
     border-radius: 5px;
 	color:#ffffff;
@@ -137,14 +148,15 @@ nav .menu-btn,
     border: 2px solid #bf2222;
 }
 
+
 #products{
     width:100%;
     height:120vh;
     box-sizing: border-box;
     font-family:'Lato';
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display:inline-block;
+    /* flex-direction: column; */
+    align-items:center;
     justify-content: center;
     padding-top: 40px ;
     background-color: rgb(1, 22, 44);}
@@ -355,8 +367,9 @@ nav .menu-btn,
         font-size: 1.5rem;
     }
     .header-heading h1{
-        font-size: 3rem;
+        font-size: 4rem;
     }
+    
     .header-heading .details{
         font-size: 1rem;
     }
@@ -541,12 +554,17 @@ nav .menu-btn,
 } 
 
 /* about styling */
+.about{
+    margin-top: 900px;
+    margin-left: 300px;
+}
        .about-image{
         height: 500px;
-        width: 400px;
+        width: 500px;
       margin-left: 200px;
       }
       .about-container{
+        margin-left: 10px;
         margin-top: 200px;
         font-size: 18px;
         display: flex;
@@ -555,19 +573,66 @@ nav .menu-btn,
       .about-us{
       border: 2px;
       border-style: solid;
-      border-color: rgb(233, 135, 8);
-      width: 400px;
+      border-color: #bf6702;
+      width: 500px;
       text-align: center;
       height: 500px;
       font-family: Lato;
+      font-size: 25px;
       color: beige;
       }
       
       h4{
          text-decoration: #bf6702;
          text-decoration: underline;
-         color: #ac7205;
+         color: #ec8e42;
          font-family: Lato;
          font-size: 30px;
       }
 
+/* sign-up style */
+.sign-button{
+    margin-left: 1000px;
+    margin-top: 15px;
+    font-size: 2rem;
+    border-radius: 2rem;
+    color: #bb5c08;
+}
+/* footer */
+
+
+.footer-dark {
+  padding:10px 0;
+  color:#190b02;
+  
+  background-color:#fac29c;
+  margin-top: 600px;
+  font-size: 25px;
+  
+}
+
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
