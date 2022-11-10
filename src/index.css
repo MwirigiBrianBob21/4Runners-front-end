@@ -571,3 +571,11 @@ nav .menu-btn,
          font-size: 30px;
       }
 
+      .sign-button{
+        margin-left: 810px;
+        margin-top: 15px;
+        font-size: 2rem;
+        border-radius: 1rem;
+        color: #974905;
+    }
+
