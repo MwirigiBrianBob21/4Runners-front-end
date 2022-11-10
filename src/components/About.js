@@ -12,7 +12,7 @@ function About(){
      </div>
      <div className="about-us">
         <h4>ABOUT US</h4><br/><br/>
-        <p>  A stunning combination of contemporary Kenyan cuisines with Italian influences, 4Runners Bistro in Kilimani, Nairobi
+        <p>  A stunning combination of contemporary Kenyan fare with Italian influences, 4Runners Bistro in Kilimani, Nairobi
            creates a dining experience that is deliciously familiar yet refined and innovative. With elegant indoor and outdoor dining, genuine hospitality and exquisite food 4Runners Bistro boasts it all.  </p>
      </div>
             
