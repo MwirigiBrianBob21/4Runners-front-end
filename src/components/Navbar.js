@@ -29,6 +29,8 @@ function Navbar() {
                <li> <NavLink to="/menu"   > Menu</NavLink></li>
                <li> <NavLink to="/reservation"  > Reservation </NavLink></li>
                <li> <NavLink to="/about"  > About </NavLink></li>
+               <li> <NavLink to="/signup"  > SignUp </NavLink></li>
+               <li> <NavLink to="/signin"  > SignIn </NavLink></li>
 
       </ul>
     </nav>
