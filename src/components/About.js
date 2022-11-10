@@ -6,7 +6,7 @@ function About(){
     return(
         <div className = "about-container">
       <div className="img-container">
-        <img  className = "about-image"src = "https://images.pexels.com/photos/327158/pexels-photo-327158.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        <img  className = "about-image"src = "https://images.pexels.com/photos/327158/pexels-photo-327158.jpeg?auto=compress&cs=tinysrgb&w=1600" alt=""
 
 />
      </div>
