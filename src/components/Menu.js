@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState }  from 'react'
 import Menubox from './MenuBox';
-import pimage1 from '../images/s1.png'
-import pimage2 from '../images/s2.png'
+import MenuCard from "./MenuCard";
 import { useEffect, useState } from 'react';
+
 
 function Menu() {
   const [allMenu, setAllMenu] = useState([]); 
