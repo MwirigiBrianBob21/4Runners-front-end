@@ -1,34 +1,18 @@
-
-
 import About from './About'
 import {Link, useNavigate} from 'react-router-dom';
 function Home() {
-
- 
-    
-        <div className='header-heading'>
-            {/* <h3>It's A Great Time To Feast</h3> */}
-            <h1><span>ITS A GREAT TIME</span> TO<br/> FEAST</h1>
-
-
-
-
   const navigate = useNavigate();
-  const navigateToSignUp = () => {
-    
-    navigate('/SignUp');
-  };
+  // const navigateToSignUp = () => {
+  //   navigate('/SignUp');
+  // };
   return (
     <div id='main'>
-          <div>
+          {/* <div>
   <button className='sign-button' onClick={navigateToSignUp }>SignUp</button>
-</div>
+</div> */}
 <div className='header-heading'>
             {/* <h3>It's A Great Time To Feast</h3> */}
             <h1><span>ITS A GREAT TIME</span> TO<br/> FEAST</h1>
-
-        
-           
         </div><br/><br/>
 <div  className='about'>
   <About/>
@@ -38,7 +22,6 @@ function Home() {
         <footer>
             <div class="container">
                 <div class="row">
-                
                     <div class="col item social">
                       <i class="fa fa-facebook-f"></i>
                     <i class="icon ion-social-twitter"></i>
@@ -48,7 +31,7 @@ function Home() {
                 <p class="copyright">4Runners Bistro © 2022</p>
             </div>
         </footer>
-    </div>  
+    </div>
       </div>
     </div>
   )

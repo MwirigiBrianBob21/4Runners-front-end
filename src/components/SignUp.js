@@ -4,8 +4,8 @@ import { Link, useNavigate } from 'react-router-dom'
 const SignUp = () => {
     const navigate = useNavigate()
     const [customer, setCustomer] = useState({
-        name: '',
-        email: '',
+        user_name: '',
+        user_email: '',
         password:'',
         
     })
@@ -16,6 +16,13 @@ const SignUp = () => {
     
     const handleSubmission = (e) => {
         e.preventDefault()
+        
+        const customerData = {
+            user_name: user_name,
+            user_email: user_email,
+            password: password,
+          };
+
         if (customer.name.length < 3) {
             setErrors('Name must be at least 3 characters long')
         } else if (customer.email.length < 3) {
@@ -24,12 +31,12 @@ const SignUp = () => {
             setErrors('Password must be at least 3 characters long')
         } 
          else {
-        fetch('http://localhost:9292/developers', {
+        fetch('http://localhost:9292/customers', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(customer)
+            body: JSON.stringify(customerData)
         })
         .then(response => response.json())
         .then(data => console.log(data))
