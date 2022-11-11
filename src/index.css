@@ -705,7 +705,28 @@ nav .menu-btn,
 	height: 100px;
     border-radius: 10px;
     font-size: 25px;
-    color: black;
-    
+
+    color: black;    
+}
+
+#new-button{
+    outline: none;
+    border: none;
+    padding: 2%;
+    color: red;
+    font-size: 26px;
+    border: lightcyan 3px solid; 
+}
+
+#title-description{
+    font-family: auto;
+    color: #F7B07E;
+
+}
+
+#title-card{
+    font-family: ui-rounded;
+    color: #4FA095;
+
 }
 

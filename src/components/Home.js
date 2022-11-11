@@ -5,6 +5,8 @@ import {Link, useNavigate} from 'react-router-dom';
 function Home() {
 
  
+  const navigate = useNavigate();
+  const navigateToSignUp = () => {
     
        
 
@@ -50,5 +52,6 @@ function Home() {
       </div>
     </div>
   )
+}
 }
 export default Home
