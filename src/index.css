@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
@@ -509,6 +511,22 @@ nav .menu-btn,
   
 
 }
+.comments-div {
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  .comments-list {
+    background-color: rgb(252, 254, 254);
+    padding: 15px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+  
+  }
+
 .reservations{
   position: relative;
     display: inline-flex;
@@ -651,5 +669,31 @@ nav .menu-btn,
     text-align:center;
     margin-top:20px;
   }
+}
+
+/* sign styling */
+.sign-in-form{
+   margin-left: 100px;
+   padding: 150px;
+   font-size: 30px;
+   color: #d48d50;
+
+
+    
+}
+.input-field{
+    padding: 10px;
+    
+}
+.input-field btn-solid{
+    color: black;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    border-radius: 4rem;   
 }
 

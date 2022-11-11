@@ -6,23 +6,21 @@ function Home() {
 
  
     
-        <div className='header-heading'>
-            {/* <h3>It's A Great Time To Feast</h3> */}
-            <h1><span>ITS A GREAT TIME</span> TO<br/> FEAST</h1>
+       
 
 
 
 
   const navigate = useNavigate();
-  const navigateToSignUp = () => {
+  // const navigateToSignUp = () => {
     
-    navigate('/SignUp');
-  };
+  //   navigate('/SignUp');
+  // };
   return (
     <div id='main'>
-          <div>
+          {/* <div>
   <button className='sign-button' onClick={navigateToSignUp }>SignUp</button>
-</div>
+</div> */}
 <div className='header-heading'>
             {/* <h3>It's A Great Time To Feast</h3> */}
             <h1><span>ITS A GREAT TIME</span> TO<br/> FEAST</h1>

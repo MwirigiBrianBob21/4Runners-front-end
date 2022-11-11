@@ -1,88 +1,77 @@
-import React, {useState} from "react";
+import React, {useState}from "react";
 import { useNavigate } from 'react-router-dom'
-
 
 //import MenuList from "./MenuList";
 //import About from "./About";
 
 
-function Reservation ({onAddMessage}){
-  
-  const {reservation,setReservation}=useState({
-    name:'',
-    email:'',
+function Reservation ({addReservation}){
+   const [reservationForm, setReservationForm] = useState({
+   name:'',
+   email:'',
     phone_number:'',
-    time:'',
-    seats:''
-    
-        
-  })
-   const navigate = useNavigate()
-   navigate('/signin')
-   navigate('/signup')
-   
-
-  const navigateToViewReservations = () =>{
-    navigate('/viewreservations');
-  };
+    seats: '',
+   time:''
+  });
 
 
- function handleSubmit(e){
-   e.preventDefault();
+
+   function handleChanges(e) {
+      setReservationForm({...reservationForm, [e.target.name]:e.target.value})
+  }
+  function handleSubmit(e) {
+   e.preventDefault()
    fetch("http://localhost:9292/reservations", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+     method: "POST",
+     headers: {
+       "Content-Type": "application/json",
      },
-      body: JSON.stringify({
-        name:'',
-        email:'',
-        phone_number:'',
-        time:'',
-        seats:''
-        
-
-
-
+     body: JSON.stringify({
+      name: reservationForm.name,
+      email:reservationForm.email,
+       phone_number:reservationForm.phone_number,
+       seats: reservationForm.seats,
+      time:reservationForm.time,
      }),
-    })
-      .then((r) => r.json())
-      .then((newMessage) => {
-        onAddMessage(newMessage);
-        
-      });
- }
-
-  const handleChange = (e) => {
-    setReservation({
-        ...reservation,
-        [e.target.name] : e.target.value
    })
+     .then((res) => res.json())
+     .then((reservation) => {
+       addReservation(reservation);
+       setReservationForm({ ...reservationForm, name: "", email: "", phone_number: "", seats:"", time:"" });
+     });
+   
 }
 
 
-  
+
+   // const navigate = useNavigate()
+   // navigate('/signin')
+   // navigate('signup')
+
+
    return(
  <div className="form-container">
 
          <h1>Place your reservation here.</h1>
 
-   <form className="reservations">
+   <form onSubmit={handleSubmit}  className="reservations">
    <label for="fullname">Full Name</label>
-    <input type='text' name='name' placeholder="full name" value={reservation.name} onChange={handleChange}/><br/>
+    <input type='text' onChange={handleChanges}  value={reservationForm.name}
+ name="name"placeholder="full name"/><br/>
     <label for="email">Email</label>
-    <input type='email' name='email' placeholder="enter your email" value={reservation.email} onChange={handleChange}/><br/>
+    <input type='email' onChange={handleChanges}  value={reservationForm.email} name="email" placeholder="enter your email"/><br/>
     <label for="number">Phone Number</label>
-    <input type='number'name='number' placeholder="enter your phone number" value={reservation.phone_number} onChange={handleChange}/><br/>
+    <input type='number' onChange={handleChanges}  value={reservationForm.phone_number}  name="phone_number" placeholder="enter your phone number"/><br/>
+    <label for="seats">Number of Seats</label>
+    <input type='number' onChange={handleChanges}  value={reservationForm.seats}  name="seats" placeholder="enter number of seats"/><br/>
     <label for="datetime">Date-Time</label>
-    <input type='datetime-local'name='date' placeholder="enter time and date" value={reservation.date} onChange={handleChange}/><br/>
-    <label for="seats" >Number of Seats</label>
-    <input type='number' name='seats' placeholder="enter number of seats" value={reservation.seats} onChange={handleChange}/><br/>
+    <input type='datetime-local' onChange={handleChanges}  value={reservationForm.time}  name="time" placeholder="enter time and date"/><br/>
+   
     
 
     <div className="buttons">
-    <button type="submit" onClick={handleSubmit}>Book Reservation</button>
-    <button type="submit" onClick={navigateToViewReservations}>View Reservation</button>
+    <button type="submit">Book Reservation</button>
+    <button type="submit">View Reservation</button>
     </div>
 </form>
 
@@ -91,10 +80,4 @@ function Reservation ({onAddMessage}){
    ) 
 }
 
-export default Reservation
-
-
-
-
-
-
+export default Reservation;
