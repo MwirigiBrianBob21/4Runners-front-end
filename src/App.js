@@ -1,22 +1,18 @@
-import React, { useState, useEffect } from "react";
-// import Reservation from './components/Reservation';
+import React, {useState, useEffect} from 'react'
 import styled from "styled-components";
-
+import About from './components/About';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Menu from "./components/Menu";
-// import About from './components/About';
-// import Reservation from './components/Reservation';
-import PacManLoader from "react-spinners/PacmanLoader";
-import SignUp from "./components/SignUp";
-import SignIn from "./components/signIn";
-import MenuCard from "./components/MenuCard";
+import { FaCommentAlt, FaThumbsUp, FaRegEye } from "react-icons/fa";
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Menu from './components/Menu';
+import PacManLoader from 'react-spinners/PacmanLoader';
+import SignUp from './components/SignUp';
+import SignIn from './components/signIn';
 import Reservation from "./components/Reservation";
 import ViewReservation from "./components/ViewReservation";
-import { FaCommentAlt, FaThumbsUp, FaRegEye } from "react-icons/fa";
+
 
 // const StyledRoot = styled.div`
 //   padding: 50px 12px;
@@ -52,10 +48,29 @@ function App() {
     setCurrentUser(user);
   };
 
+
   const date = new Date().toLocaleDateString();
   const onCommentClick = () => alert("You clicked comments");
   const onLikesClick = () => alert("You clicked comments");
   const onViewsClick = () => alert("You clicked comments");
+
+      </div>
+      <Routes>
+      <Route exact path="/" element={<Home/>}></Route>
+      {/* <Route exact path="/about" element={<About/>}></Route> */}
+            <Route exact path="/reservation" element={<Reservation/>}></Route>
+
+
+      <Route exact path="/menu" element={<Menu/>}></Route> 
+      <Route exact path="/signin" element={<SignIn changeUser={changeUser} />} />
+      <Route exact path="/signup" element={<SignUp />} /> 
+      <Route exact path="/viewreservation" element={<ViewReservation  />} />
+    
+      </Routes>
+      </Router>
+      </div>
+    }
+
 
   const buttons = [
     {
@@ -83,6 +98,7 @@ function App() {
       onClick: onViewsClick,
     },
   ];
+
 
   return (
     <div className="App">
@@ -153,3 +169,4 @@ function App() {
   );
 }
 export default App;
+

@@ -1,5 +1,26 @@
+
 import React, { useEffect, useState } from "react";
 import styled from 'styled-components'
+
+
+import styled from 'styled-components'
+
+
+const Title = styled.h2`
+  color: #fff;
+  font-weight: 300;
+`
+const Date = styled.div`
+  color: #ccc;
+  font-weight: 300;
+  margin: 6px 0;
+`
+const Description = styled.p`
+  color: #fff;
+  font-weight: 300;
+`
+
+
 
 
 
@@ -79,6 +100,7 @@ function MenuCard({ title, date, description, actions }) {
   
   return (
 
+
     // {favMenu.map(
     //   menu=> if(menu.price >=200){
     //     return menu
@@ -101,4 +123,5 @@ function MenuCard({ title, date, description, actions }) {
 )}
   
             
+
 export default MenuCard
