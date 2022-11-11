@@ -38,8 +38,10 @@ function Navbar() {
       {/* <Route exact path="/reservation" element={<Reservation/>}></Route> */}
       
                {/* <li> <NavLink to="/about"  > About </NavLink></li> */}
+
                {/* <li> <NavLink to="/viewreservation"  > Reservation </NavLink></li> */}
                  <li> <NavLink to="/reservation"  > Reservation </NavLink></li>
+
 
 
                <li> <NavLink to="/signup"  > SignUp </NavLink></li>
@@ -54,5 +56,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-

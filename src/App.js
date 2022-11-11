@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from 'react'
+import About from './components/About';
+// import Reservation from './components/Reservation';
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
@@ -57,6 +60,7 @@ function App() {
       {/* <Route exact path="/about" element={<About/>}></Route> */}
             <Route exact path="/reservation" element={<Reservation/>}></Route>
 
+
       <Route exact path="/menu" element={<Menu/>}></Route> 
       <Route exact path="/signin" element={<SignIn changeUser={changeUser} />} />
       <Route exact path="/signup" element={<SignUp />} /> 
@@ -73,7 +77,3 @@ function App() {
   )
 }
   export default App;
-
- 
-
-

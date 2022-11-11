@@ -42,11 +42,13 @@ function Reservation ({addReservation}){
    
 }
 
+
 const nav = useNavigate()
 // console.log(nav)
 const navigateToViewReservation = () => {
   nav('/ViewReservation');
 };
+
 
    // const navigate = useNavigate()
    // navigate('/signin')
@@ -87,5 +89,7 @@ const navigateToViewReservation = () => {
    ) 
 }
 
+
 export default Reservation;
+
 
