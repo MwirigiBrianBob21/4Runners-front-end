@@ -5,11 +5,13 @@ import "./App.css";
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Menu from './components/Menu';
-import About from './components/About';
-import Reservation from './components/Reservation';
+// import About from './components/About';
+// import Reservation from './components/Reservation';
 import PacManLoader from 'react-spinners/PacmanLoader';
 import SignUp from './components/SignUp';
 import SignIn from './components/signIn';
+// import Reservation from "./components/Reservation";
+import ViewReservation from "./components/ViewReservation";
 
 
 function App() {
@@ -52,8 +54,10 @@ function App() {
       </div>
       <Routes>
       <Route exact path="/" element={<Home/>}></Route>
-      <Route exact path="/about" element={<About/>}></Route>
-      <Route exact path="/reservation" element={<Reservation/>}></Route>
+      {/* <Route exact path="/about" element={<About/>}></Route> */}
+      {/* <Route exact path="/reservation" element={<Reservation/>}></Route> */}
+            <Route exact path="/viewreservation" element={<ViewReservation/>}></Route>
+
       <Route exact path="/menu" element={<Menu/>}></Route> 
       <Route exact path="/signin" element={<SignIn changeUser={changeUser} />} />
       <Route exact path="/signup" element={<SignUp />} />     
@@ -65,6 +69,8 @@ function App() {
 
 
   </div>
+  )
+}
   export default App;
 
  

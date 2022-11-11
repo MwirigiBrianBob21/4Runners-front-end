@@ -35,8 +35,11 @@ function Navbar() {
       <ul className='menu'>
                <li> <NavLink to="/"  >  Home </NavLink></li>
                <li> <NavLink to="/menu"   > Menu</NavLink></li>
-               <li> <NavLink to="/reservation"  > Reservation </NavLink></li>
-               <li> <NavLink to="/about"  > About </NavLink></li>
+      {/* <Route exact path="/reservation" element={<Reservation/>}></Route> */}
+      
+               {/* <li> <NavLink to="/about"  > About </NavLink></li> */}
+               <li> <NavLink to="/viewreservation"  > Reservation </NavLink></li>
+
                <li> <NavLink to="/signup"  > SignUp </NavLink></li>
                <li> <NavLink to="/signin"  > SignIn </NavLink></li>
 
