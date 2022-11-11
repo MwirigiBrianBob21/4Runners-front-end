@@ -21,7 +21,7 @@ function Reservation ({addReservation}){
   }
   function handleSubmit(e) {
    e.preventDefault()
-   fetch("http://localhost:9292/customers/reservations", {
+   fetch("http://localhost:9292/reservations", {
      method: "POST",
      headers: {
        "Content-Type": "application/json",

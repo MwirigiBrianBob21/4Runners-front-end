@@ -19,9 +19,28 @@ import ReservationList from "./ReservationList";
    .then((reservations) => setReservation(reservations))
 }, [])
 
+function handleDeleteItem(deletedItem) {
+   const updatedReservations = reservations.filter((reservation) => reservation.id !== deletedItem.id);
+   setReservation(updatedReservations);
+ }
+
+ function handleUpdateItem(updatedItem) {
+   const updatedItems = reservations.map((reservation) => {
+      if (reservation.id === updatedItem.id) {
+        return updatedItem;
+      } else {
+        return reservation;
+      }
+    });
+    setReservation(updatedItems);
+  }
+
+
+
 const reservationList = reservations.map((reservation) => {
 
-   return <ReservationList key= {reservation.id} reservation={reservation}/>
+   return <ReservationList key= {reservation.id} reservation={reservation}  
+   onDeleteItem={handleDeleteItem} onUpdateItem={handleUpdateItem}/>
  });
 
 
