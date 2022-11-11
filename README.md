@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-The backend [API](https://github.com/Collins7-7/4Runners-Bistro-Backend)
+We created a [backend API](https://github.com/Collins7-7/4Runners-Bistro-Backend) that we used for this project.
 
 ## Available Scripts
 
