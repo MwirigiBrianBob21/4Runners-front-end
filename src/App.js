@@ -1,17 +1,31 @@
 import React, { useState, useEffect } from "react";
+// import Reservation from './components/Reservation';
+import styled from "styled-components";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Menu from './components/Menu';
-import About from './components/About';
-import Reservation from './components/Reservation';
-import PacManLoader from 'react-spinners/PacmanLoader';
-import SignUp from './components/SignUp';
-import SignIn from './components/signIn';
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Menu from "./components/Menu";
+// import About from './components/About';
+// import Reservation from './components/Reservation';
+import PacManLoader from "react-spinners/PacmanLoader";
+import SignUp from "./components/SignUp";
+import SignIn from "./components/signIn";
 import MenuCard from "./components/MenuCard";
+import Reservation from "./components/Reservation";
+import ViewReservation from "./components/ViewReservation";
+import { FaCommentAlt, FaThumbsUp, FaRegEye } from "react-icons/fa";
 
+// const StyledRoot = styled.div`
+//   padding: 50px 12px;
+// `;
+// const StyledContainer = styled.div`
+//   max-width: 550px;
+//   width: 100%;
+//   margin: auto;
+// `;
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -33,85 +47,109 @@ function App() {
     }, 3000);
   }, []);
 
-  const [currentUser, setCurrentUser] = useState(null)
+  const [currentUser, setCurrentUser] = useState(null);
   const changeUser = (user) => {
-    setCurrentUser(user)
-  }
+    setCurrentUser(user);
+  };
+
+  const date = new Date().toLocaleDateString();
+  const onCommentClick = () => alert("You clicked comments");
+  const onLikesClick = () => alert("You clicked comments");
+  const onViewsClick = () => alert("You clicked comments");
+
+  const buttons = [
+    {
+      label: (
+        <>
+          <FaCommentAlt /> 0 Comments
+        </>
+      ),
+      onClick: onCommentClick,
+    },
+    {
+      label: (
+        <>
+          <FaThumbsUp /> 242 Likes
+        </>
+      ),
+      onClick: onLikesClick,
+    },
+    {
+      label: (
+        <>
+          <FaRegEye /> 187288 Views
+        </>
+      ),
+      onClick: onViewsClick,
+    },
+  ];
 
   return (
+    <div className="App">
+      {loading ? (
+        <PacManLoader
+          color={"#bf2222"}
+          loading={loading}
+          cssOverride={override}
+          size={30}
+          alignItem={"center"}
+          marginLeft={"50px"}
+          
+          
+        />
+      ) : (
+        <div>
+          <Router>
+            <div>
+              <Navbar />
+            </div>
+            <Routes>
+              <Route exact path="/" element={<Home />}></Route>
+              {/* <Route exact path="/about" element={<About/>}></Route> */}
+              <Route
+                exact
+                path="/reservation"
+                element={<Reservation />}
+              ></Route>
 
-    <div className='App'>
-  {
-      loading ? <PacManLoader color={'#bf2222'} loading={loading} cssOverride={override} size={30}/>
-      :
-      <div>
-        <Router>
-          <div>
-            
-      <Navbar/>
+              <Route exact path="/menu" element={<Menu />}></Route>
 
-      </div>
-      <Routes>
-      <Route path="/" element={<Home/>}></Route>
-      <Route path="about" element={<About/>}></Route>
-      <Route path="reservation" element={<Reservation/>}></Route>
-      
-      <Route path="menu" element={<Menu/>}>
-        <Route path=":id" element={<MenuCard/>}/>
-      </Route>
+              <Route
+                exact
+                path="/signin"
+                element={<SignIn changeUser={changeUser} />}
+              />
+              <Route exact path="/signup" element={<SignUp />} />
+              <Route
+                exact
+                path="/viewreservation"
+                element={<ViewReservation />}
+              />
 
-     
-      <Route path="/signin" element={<SignIn changeUser={changeUser} />} />
-      <Route path="/signup" element={<SignUp />} />     
-      </Routes>
-      </Router>
-      </div>
-    }
-
-{/* export default function App() {
-  return (
-    <div className="app">
-      <BrowserRouter>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/route-a">Route A</Link>
-          <Link to="/route-b">Route B</Link>
-          <Link to="/route-a/1">Nested Route A1</Link>
-          <Link to="/route-a/2">Nested Route A2</Link>
-          <Link to="/route-b/1">Nested Route B1</Link>
-          <Link to="/route-b/2">Nested Route B2</Link>
-        </nav>
-
-        <Routes>
-          <Route
-            path="/route-b"
-            element={<MyComponent title="Nested Route" />}
-          />
-          <Route
-            path="/route-a"
-            element={<MyComponent title="Nested Route" />}
-          />
-          <Route
-            path="/route-b/:id"
-            element={<MyComponent title="Nested Route" />}
-          />
-          <Route
-            path="/route-a/:id"
-            element={<MyComponent title="Nested Route" />}
-          />
-          <Route path="/" />
-        </Routes>
-      </BrowserRouter>
+              <Route
+                exact
+                path="/menucard"
+                element={
+                  
+                      <MenuCard
+                        title="The Benefits of Green Apples"
+                        date={date}
+                        description="Green apples have a high fiber content which helps in increasing the
+      body's metabolism. While consuming an apple, make sure that you're not
+      tossing the peel in the trash. Consuming apple with its peel improves
+      the overall health. Due to its high fiber content, apple helps in
+      detoxification process. It keeps the liver and digestive system away
+      from harmful elements."
+                        actions={buttons}
+                      />
+                   
+                }
+              />
+            </Routes>
+          </Router>
+        </div>
+      )}
     </div>
   );
-} */}
- 
-
-
-  </div>
-  )}
-  export default App;
-
- 
-
-
+}
+export default App;

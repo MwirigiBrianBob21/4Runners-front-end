@@ -8,15 +8,21 @@ function Home() {
   const navigate = useNavigate();
   const navigateToSignUp = () => {
     
-    navigate('/SignUp')
-  }
-  
+       
 
+
+
+
+
+  // const navigateToSignUp = () => {
+    
+  //   navigate('/SignUp');
+  // };
   return (
     <div id='main'>
-          <div>
+          {/* <div>
   <button className='sign-button' onClick={navigateToSignUp }>SignUp</button>
-</div>
+</div> */}
 <div className='header-heading'>
             {/* <h3>It's A Great Time To Feast</h3> */}
             <h1><span>ITS A GREAT TIME</span> TO<br/> FEAST</h1>
@@ -46,5 +52,6 @@ function Home() {
       </div>
     </div>
   )
+}
 }
 export default Home

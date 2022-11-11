@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Menubox from "./MenuBox";
-import MenuCard from "./MenuCard";
-import pimage1 from "../images/s1.png";
-import pimage2 from "../images/s2.png";
-import {Outlet} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 function Menu() {
   const [allMenu, setAllMenu] = useState([]); 
@@ -15,6 +12,11 @@ function Menu() {
   }, []);
 
   // set if data.price 
+  const nav = useNavigate()
+// console.log(nav)
+const navigateToMenuCard = () => {
+  nav('/MenuCard');
+};
 
 
   return (
@@ -26,10 +28,13 @@ function Menu() {
         similique omnis 33 voluptatem sequi sed obcaecati accusamus et delectus
         nostrum et perferendis ratione cum provident unde.{" "}
       </p>
+      <button type="submit" onClick={navigateToMenuCard} id="new-button">Our Top Cuisines</button>
+
       
       <div className="a-container">
       
-      {allMenu.map((menu) => (
+      {allMenu.map((menu) => (        
+
           <Menubox
             key={menu.id}
             image={menu.image}
