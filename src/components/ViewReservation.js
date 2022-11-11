@@ -11,7 +11,7 @@ import ReservationList from "./ReservationList";
       setReservation([...reservations, newReservation]);
   }
   useEffect(() => {
-   fetch("http://localhost:9292/reservations")
+   fetch(`http://localhost:9292/reservations`)
    .then((res) => res.json())
    .then((reservations) => setReservation(reservations))
 }, [])
@@ -25,10 +25,10 @@ const reservationList = reservations.map((reservation) => {
 
   return(
    <div>
-      <>
-<Reservation addReservation={addReservation} />
-</><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><div>    {reservationList} </div>
+      
+<div>{addReservation} </div><br/><br/><br/><br/>
+
+<div> {reservationList} </div>
 
       </div>
   );
