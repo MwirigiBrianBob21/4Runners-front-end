@@ -1,7 +1,7 @@
 import React, { useEffect, useState }  from 'react'
 import Menubox from './MenuBox';
 import MenuCard from "./MenuCard";
-import { useEffect, useState } from 'react';
+
 
 
 function Menu() {
