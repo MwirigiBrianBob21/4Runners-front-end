@@ -43,6 +43,12 @@ function Reservation ({addReservation}){
 }
 
 
+const nav = useNavigate()
+// console.log(nav)
+const navigateToViewReservation = () => {
+  nav('/ViewReservation');
+};
+
 
    // const navigate = useNavigate()
    // navigate('/signin')
@@ -71,13 +77,19 @@ function Reservation ({addReservation}){
 
     <div className="buttons">
     <button type="submit">Book Reservation</button>
-    <button type="submit">View Reservation</button>
+    {/* <button onClick={navigateToViewReservation} type="submit">View Reservation</button> */}
     </div>
 </form>
+<div className="view-button">
+<button onClick={navigateToViewReservation} type="submit">View Reservation</button>
+</div>
 
 </div>
 
    ) 
 }
 
+
 export default Reservation;
+
+

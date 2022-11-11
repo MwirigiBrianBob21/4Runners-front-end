@@ -537,6 +537,7 @@ nav .menu-btn,
     transition: right 0.5s;
     margin-top: 0.2px;
     padding-top: 0.5rem;
+    font-size: 20px;
     
    
 
@@ -545,7 +546,7 @@ nav .menu-btn,
 
 .reservations input{
   color: black;
-  font-size:1.5rem;
+  font-size:20px;
   padding: 20px;
   
 }
@@ -695,5 +696,16 @@ nav .menu-btn,
     justify-content: space-between;
     font-size: 2rem;
     border-radius: 4rem;   
+}
+
+.view-button{
+    margin-top: 300px;
+    padding: 30px;
+    width:700px;
+	height: 100px;
+    border-radius: 10px;
+    font-size: 25px;
+    color: black;
+    
 }
 

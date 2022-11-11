@@ -13,7 +13,7 @@ import Menu from './components/Menu';
 import PacManLoader from 'react-spinners/PacmanLoader';
 import SignUp from './components/SignUp';
 import SignIn from './components/signIn';
-// import Reservation from "./components/Reservation";
+import Reservation from "./components/Reservation";
 import ViewReservation from "./components/ViewReservation";
 
 
@@ -58,12 +58,14 @@ function App() {
       <Routes>
       <Route exact path="/" element={<Home/>}></Route>
       {/* <Route exact path="/about" element={<About/>}></Route> */}
-      {/* <Route exact path="/reservation" element={<Reservation/>}></Route> */}
-            <Route exact path="/viewreservation" element={<ViewReservation/>}></Route>
+            <Route exact path="/reservation" element={<Reservation/>}></Route>
+
 
       <Route exact path="/menu" element={<Menu/>}></Route> 
       <Route exact path="/signin" element={<SignIn changeUser={changeUser} />} />
-      <Route exact path="/signup" element={<SignUp />} />     
+      <Route exact path="/signup" element={<SignUp />} /> 
+      <Route exact path="/viewreservation" element={<ViewReservation  />} />
+    
       </Routes>
       </Router>
       </div>
