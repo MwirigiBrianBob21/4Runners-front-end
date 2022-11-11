@@ -10,15 +10,15 @@ import Reservation from './components/Reservation';
 import PacManLoader from 'react-spinners/PacmanLoader';
 import SignUp from './components/SignUp';
 import SignIn from './components/signIn';
-
+import MenuCard from "./components/MenuCard";
 
 
 function App() {
   const [loading, setLoading] = useState(false);
 
-  const [menu, setMenu] = useState([]);
-  const [filteredMenu, setFilteredMenu] = useState([]);
-  const [favMenu, setFavMenu] = useState([]);
+  // const [menu, setMenu] = useState([]);
+  // const [filteredMenu, setFilteredMenu] = useState([]);
+  // const [favMenu, setFavMenu] = useState([]);
 
   const override = {
     display: "block",
@@ -47,19 +47,66 @@ function App() {
       <div>
         <Router>
           <div>
+            
       <Navbar/>
+
       </div>
       <Routes>
-      <Route exact path="/" element={<Home/>}></Route>
-      <Route exact path="/about" element={<About/>}></Route>
-      <Route exact path="/reservation" element={<Reservation/>}></Route>
-      <Route exact path="/menu" element={<Menu/>}></Route> 
-      <Route exact path="/signin" element={<SignIn changeUser={changeUser} />} />
-      <Route exact path="/signup" element={<SignUp />} />     
+      <Route path="/" element={<Home/>}></Route>
+      <Route path="about" element={<About/>}></Route>
+      <Route path="reservation" element={<Reservation/>}></Route>
+      
+      <Route path="menu" element={<Menu/>}>
+        <Route path=":id" element={<MenuCard/>}/>
+      </Route>
+
+     
+      <Route path="/signin" element={<SignIn changeUser={changeUser} />} />
+      <Route path="/signup" element={<SignUp />} />     
       </Routes>
       </Router>
       </div>
     }
+
+{/* export default function App() {
+  return (
+    <div className="app">
+      <BrowserRouter>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/route-a">Route A</Link>
+          <Link to="/route-b">Route B</Link>
+          <Link to="/route-a/1">Nested Route A1</Link>
+          <Link to="/route-a/2">Nested Route A2</Link>
+          <Link to="/route-b/1">Nested Route B1</Link>
+          <Link to="/route-b/2">Nested Route B2</Link>
+        </nav>
+
+        <Routes>
+          <Route
+            path="/route-b"
+            element={<MyComponent title="Nested Route" />}
+          />
+          <Route
+            path="/route-a"
+            element={<MyComponent title="Nested Route" />}
+          />
+          <Route
+            path="/route-b/:id"
+            element={<MyComponent title="Nested Route" />}
+          />
+          <Route
+            path="/route-a/:id"
+            element={<MyComponent title="Nested Route" />}
+          />
+          <Route path="/" />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+} */}
+ 
+
 
   </div>
   )}
